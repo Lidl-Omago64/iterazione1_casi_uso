@@ -1,5 +1,6 @@
 package org.example.service;
 
+import org.example.Dto.HackathonRequestDto;
 import org.example.models.Hackathon;
 import org.example.repository.HackathonRespository;
 import org.springframework.stereotype.Service;
@@ -18,7 +19,8 @@ public class HackathonService {
         return hackathonRespository.findAll();
     }
 
-    public Hackathon addHackathon(Hackathon hackathon) {
-        return hackathonRespository.save(hackathon);
+    public Hackathon addHackathon(HackathonRequestDto hackathon) {
+
+        return hackathonRespository.save(hackathon.toEntity());
     }
 }

@@ -1,5 +1,6 @@
 package org.example.controller;
 
+import org.example.Dto.HackathonRequestDto;
 import org.example.models.Hackathon;
 import org.example.service.HackathonService;
 import org.springframework.web.bind.annotation.*;
@@ -22,7 +23,7 @@ public class HackathonController {
     }
 
     @PostMapping
-    public Hackathon addHackathon(@RequestBody Hackathon hackathon) {
+    public Hackathon addHackathon(@RequestBody HackathonRequestDto hackathon) {
         return hackathonService.addHackathon(hackathon);
     }
 }
