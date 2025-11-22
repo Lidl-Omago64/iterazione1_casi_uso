@@ -3,6 +3,7 @@ package org.example.Dto;
 import org.example.models.BuilderHackathon;
 import org.example.models.Hackathon;
 import org.example.models.HackathonBuilder;
+import org.example.models.Staff.Organizzatore;
 import org.example.util.State;
 
 import java.time.LocalDateTime;
@@ -18,7 +19,8 @@ public record HackathonRequestDto(
         LocalDateTime dataFine,
         State stato,
         Integer capienzaMax,
-        Integer capienzaMin
+        Integer capienzaMin,
+        Integer organizzatoreId
 ) {
 
     public Hackathon toEntity() {

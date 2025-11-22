@@ -23,8 +23,8 @@ public class HackathonController {
     }
 
     @PostMapping
-    public Hackathon addHackathon(@RequestBody HackathonRequestDto hackathon) {
-        return hackathonService.addHackathon(hackathon);
+    public Hackathon addHackathon(@RequestBody HackathonRequestDto dto) {
+        return hackathonService.addHackathon(dto);
     }
 }
 
